@@ -1,15 +1,21 @@
-import {Page} from 'ionic/ionic';
-import {Http} from "angular2/http";
-import {NgZone} from "angular2/core";
+import {Http} from "@angular/http";
+import {Component, NgZone} from "@angular/core";
+import * as io from 'socket.io-client';
 
-@Page({
+@Component({
     templateUrl: 'build/pages/home/home.html',
 })
 
 export class HomePage {
+    messages: any;
+    socketHost: string;
+    zone: NgZone;
+    chatBox: string;
+    socket: any;
+
     constructor(http: Http) {
         this.messages = [];
-        this.socketHost = "http://192.168.57.1:3000";
+        this.socketHost = "http://localhost:3000";
         this.zone = new NgZone({enableLongStackTrace: false});
         http.get(this.socketHost + "/fetch").subscribe((success) => {
             var data = success.json();

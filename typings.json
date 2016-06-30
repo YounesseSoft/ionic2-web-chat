@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "lodash": "registry:npm/lodash#4.0.0+20160416211519"
+  },
+  "globalDependencies": {
+    "es6-shim": "registry:dt/es6-shim#0.31.2+20160317120654",
+    "zone.js": "github:gdi2290/typed-zone.js#66ea8a3451542bb7798369306840e46be1d6ec89"
+  },
+  "globalDevDependencies": {
+    "angular-protractor": "registry:dt/angular-protractor#1.5.0+20160425143459",
+    "jasmine": "registry:dt/jasmine#2.2.0+20160505161446",
+    "node": "registry:dt/node#6.0.0+20160514165920",
+    "selenium-webdriver": "registry:dt/selenium-webdriver#2.44.0+20160317120654",
+    "socket.io-client": "registry:dt/socket.io-client#1.4.4+20160317120654"
+  }
+}
